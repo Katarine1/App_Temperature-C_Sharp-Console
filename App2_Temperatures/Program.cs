@@ -36,7 +36,8 @@ namespace App2_Temperatures
                         if (number == 1)
                         {
                             Console.Write("\t\tEnter Value Celsius: ");
-                            double c = int.Parse(Console.ReadLine());
+                            string celsius = Console.ReadLine();
+                            double c = double.Parse(celsius, CultureInfo.InvariantCulture);
                             Celsius cel = new Celsius(c);
                             string k = cel.CelsiusToKelvin();
                             Console.WriteLine();
@@ -46,7 +47,8 @@ namespace App2_Temperatures
                         else if (number == 2)
                         {
                             Console.Write("\t\tEnter Value Celsius: ");
-                            double c = int.Parse(Console.ReadLine());
+                            string celsius = Console.ReadLine();
+                            double c = double.Parse(celsius, CultureInfo.InvariantCulture);
                             Celsius cel = new Celsius(c);
                             Console.WriteLine();
                             string f = cel.CelsiusToFahrenheit();
@@ -69,7 +71,8 @@ namespace App2_Temperatures
                         if (number == 1)
                         {
                             Console.Write("\t\tEnter Value Fahrenheit: ");
-                            double f = int.Parse(Console.ReadLine());
+                            string fahr = Console.ReadLine();
+                            double f = double.Parse(fahr, CultureInfo.InvariantCulture);
                             Fahrenheit fah = new Fahrenheit(f);
                             Console.WriteLine();
                             string c = fah.FahrenheitToCelsius();
@@ -79,7 +82,8 @@ namespace App2_Temperatures
                         else if (number == 2)
                         {
                             Console.Write("\t\tEnter Value Fahrenheit: ");
-                            double f = int.Parse(Console.ReadLine());
+                            string fahr = Console.ReadLine();
+                            double f = double.Parse(fahr, CultureInfo.InvariantCulture);
                             Fahrenheit fah = new Fahrenheit(f);
                             Console.WriteLine();
                             string k = fah.FahrenheitToKelvin();
@@ -102,7 +106,8 @@ namespace App2_Temperatures
                         if (number == 1)
                         {
                             Console.Write("\t\tEnter Value Kelvin: ");
-                            double k = int.Parse(Console.ReadLine());
+                            string kelvin = Console.ReadLine();
+                            double k = double.Parse(kelvin, CultureInfo.InvariantCulture);
                             Kelvin kel = new Kelvin(k);
                             Console.WriteLine();
                             string c = kel.KelvinToCelsius();
@@ -112,7 +117,8 @@ namespace App2_Temperatures
                         else if (number == 2)
                         {
                             Console.Write("\t\tEnter Value Kelvin: ");
-                            double k = int.Parse(Console.ReadLine());
+                            string kelvin = Console.ReadLine();
+                            double k = double.Parse(kelvin, CultureInfo.InvariantCulture);
                             Kelvin kel = new Kelvin(k);
                             Console.WriteLine();
                             string f = kel.KelvinToFahrenheit();
